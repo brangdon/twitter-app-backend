@@ -1,28 +1,24 @@
-/**
- * Created by admin on 23.07.2017.
- */
-public class Message {
+import java.io.Serializable;
+
+public class Message implements Serializable {
     String content;
     String userName;
+    String date;
+    String hour;
 
-    public Message(String content, String userName) {
+    public Message(String content, String userName, String date, String hour) {
         this.content = content;
         this.userName = userName;
+        this.date = date;
+        this.hour = hour;
     }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     public String getUserName() {
         return userName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 }
